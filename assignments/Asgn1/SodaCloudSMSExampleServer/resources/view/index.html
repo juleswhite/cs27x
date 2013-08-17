@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sms">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 278</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+    
+    <link href="css/app-specific.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="container title" style="background:#f6f8f8; width:100%;">
+       <h3 class="demo-panel-title">CS 278, Asgn 1: Text to Browser</h3>
+    </div>
+      
+  
+    <div class="container content"  ng-controller="workflowController">
+
+      <h2 id="stepTitle" class="formTitle">{{stepTitle}}</h2>
+     
+
+      
+      <div class="row" align="center">
+        <!-- <div class="span12 share">
+        <h2>asdf</h2>
+         <a href="#" class="btn btn-primary btn-block btn-large"> {{objRef.uri}}</a>
+        </div> -->
+        
+        <div class="span3" style="float:right">
+           Scan to connect:
+           <img src="http://chart.apis.google.com/chart?cht=qr&chs=350x350&chld=L&choe=UTF-8&chl={{host}}|{{encodedObjRef}}"></img>
+           Or type it in:
+           Server IP address:{{host}}| ObjRef:{{objRef.uri}}
+        </div>
+        
+        <div class="span3">
+          
+          <div ng-show="sendingEnabled" class="btn-toolbar" ng-controller="DialogDemoCtrl">
+                <div class="btn-group">
+                  <a class="btn btn-primary" href="#fakelink">Conversations</a>
+                  <a class="btn btn-primary" href="#fakelink" ng-click="openDialog()"><i class="fui-plus"></i></a>
+                </div>
+          </div>
+          <h4 ng-repeat="(from,msgs) in threads"">
+            <div ng-show="from==activeThread" class="fui-chat palette palette-sun-flower"></div>
+    		<a href="" ng-click="setActiveThread(from)">{{from}} ({{msgs.length}})</a>
+          </h4>
+        </div>
+        <div class="span6" style="margin-bottom:30px">
+        
+          <div class="span5 login-form" ng-show="activeThread.length > 0">
+            <input type="text" placeholder="Msg..." class="span4" ng-model="reply"></input>
+            <span class="btn btn-primary btn-small" ng-click="sendReply()">Send</span>
+          </div>
+          
+          <div ng-show="!sendingEnabled" class="palette palette-orange">
+            Awaiting a connection from a device...
+          </div>
+          
+          <div ng-show="activeThread.length == 0 && sendingEnabled" class="span5 msg-to">
+          No conversation selected.
+          </div>
+          <div ng-repeat="sms in msgs | filter:filterByActiveThread" 
+               class="span5" ng-class="{'msg-from':sms.from == 'self', 'msg-to':sms.from != 'self'}" 
+               style="margin-top:30px">
+           <h2>{{sms.content}}</h2>
+          </div>
+          
+        </div>
+      </div>
+
+		
+    </div> <!-- /container -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="span7">
+            <h3 class="footer-title"><img src="images/logo/magnum_multicolor_logo_horizontal.png"></img></h3>
+            <p>Interested in doing cool mobile, cloud computing, or cyber-security research?<br/>
+              Do an undergraduate research project with the Magnum Research Group.<br/>
+              Go to: <a href="http://magnum.io" target="_blank">magnum.io</a>
+            </p>
+
+           
+			<h3 class="footer-title">by Jules White (<a href="http://jules.io">jules.io</a>)</h3>
+            <p class="span7">
+              
+            </p>
+          </div> <!-- /span8 -->
+
+          <div class="span5">
+            <div class="footer-banner">
+              <h3 class="footer-title">Built on the Soda Cloud framework</h3>
+              <ul>
+                <li>Zero effort, 2-way, mobile/cloud communication</li>
+                <li>No messing networking or marshalling code, pure OO</li>
+                <li>High-performance websocket transport</li>
+                <li>Android, iOS, and Javascript libraries</li>
+              </ul>
+              Go to: <a href="https://github.com/VT-Magnum-Research/sodacloud">http://github.com/VT-Magnum-Research/sodacloud</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.stacktable.js"></script>
+    <script src="http://vjs.zencdn.net/c/video.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/uuid.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-bootstrap-templates.min.js"></script>
+    <script src="js/autobahn.js"></script>
+    <script src="js/sodajs.js"></script>
+    <script src="js/workflow.js"></script>
+
+  </body>
+</html>

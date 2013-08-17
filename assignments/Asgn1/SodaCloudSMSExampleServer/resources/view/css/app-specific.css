@@ -1,0 +1,29 @@
+
+input.large {
+	font-size:17px;
+}
+
+input.xlarge {
+	font-size:22px;
+}
+
+.container {
+	min-height:400px;
+}
+
+div.title {
+	min-height:30px;
+}
+
+div.content {
+	margin-top:50px;
+}
+
+h2.formTitle {
+	margin-left:80px;
+	margin-bottom:20px;
+}
+
+div.title > h3 {
+	margin-left:100px;
+}
