@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="SMS Sec">
+		<CheckBoxPreference android:title="Enable SMS Sec"
+			android:defaultValue="true" android:summary="Should the SMS Sec app be enabled."
+			android:key="EnableSMSSec" />
+
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Other Options">
+	
+	
+		<PreferenceScreen android:key="PhotoOptions"
+			android:title="Photo Options"
+			android:summary="This screen allows you to adjust the image capture options.">
+			
+		    <EditTextPreference android:name="Photo Server"
+			android:summary="This allows you to set the photo server that remote images are reported to."
+			android:defaultValue="http://your_photo_server.com" android:title="Photo Server"
+			android:key="PhotoServer" />
+			
+			<CheckBoxPreference android:title="Enable Image Uploads"
+				android:defaultValue="true"
+				android:summary="Should the SMS Sec app allow images to be uploaded to a remote server."
+				android:key="EnableImageUploads" />
+				
+			<CheckBoxPreference android:title="Delete Image Uploads"
+				android:defaultValue="true"
+				android:summary="Should the SMS Sec app delete photos after they are uploaded."
+				android:key="DeleteImageUploads" />
+			
+		</PreferenceScreen>
+	
+	
+	
+		<PreferenceScreen android:key="SecondPrefScreen"
+			android:title="Geolocation Options"
+			android:summary="This screen allows you to adjust the geolocation options of SMS Sec">
+			<CheckBoxPreference android:title="Enable Geolocation"
+				android:defaultValue="true"
+				android:summary="Should the SMS Sec app's geolocation feature be enabled."
+				android:key="EnableGPS" />
+			<ListPreference android:name="RefreshRate"
+				android:summary="This sets the rate at which the device will be geolocated and report its position back to you."
+				android:title="Refresh Rate" android:key="RefreshRate"
+				android:defaultValue="Every Hour" android:entries="@array/gps_rates"
+				android:entryValues="@array/gps_rates" />
+		</PreferenceScreen>
+		<PreferenceScreen android:key="TuantScreen"
+			android:title="Taunt Options"
+			android:summary="This screen allows you to adjust the taunt (toast) options of SMS Sec">
+			<ListPreference android:name="NuisanceMultiplier"
+				android:summary="This sets the number of times that a taunt will be repeated."
+				android:title="Nuisance Multiplier" android:key="NuisanceMultiplier"
+				android:defaultValue="1" android:entries="@array/taunt_multiplier"
+				android:entryValues="@array/taunt_multiplier" />
+			<CheckBoxPreference android:title="Random Arrival Times"
+				android:defaultValue="true"
+				android:summary="Enables a random delay to be applied between taunts that are repeated from the nuisance multiplier."
+				android:key="RandomArrival" />
+		</PreferenceScreen>
+
+		<Preference android:title="Stop All Services Now!"
+			android:summary="This will immediately kill off any listeners/services that are active."
+			android:key="StopAll" android:name="StopAll" />
+	</PreferenceCategory>
+</PreferenceScreen>
