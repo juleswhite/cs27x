@@ -63,14 +63,14 @@ public class SMSManagerImpl implements SMSManager {
 	}
 	
 	
-	/**
-	 * 
-	 * Asgn Step 2: Fill in the following three methods
-	 * using the Observer pattern. This class should
-	 * store a list of listeners and notify them when a new
-	 * SMS message is received.
-	 * 
-	 */
+/**
+ * 
+ * Asgn Step 2: Fill in the following three methods using the Observer
+ * pattern. This class should store a list of listeners and notify them when
+ * a new SMS message is received. You need to call
+ * l.smsSenderAdded(this) after adding a listener
+ * to your list.
+ */
 	
 	@Override
 	public void addListener(SMSListener l) {
