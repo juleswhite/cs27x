@@ -16,13 +16,17 @@ a web browser.
 Assignment Steps
 ----------------
 The assignment steps are embedded in the source files of the SodaCloudSMSExampleClient
-project. Look for "Asgn Step X" in the comments. There should be 7 steps to complete.
+project. Look for "Asgn Step X" in the comments. There should be 8 steps to complete.
 
 A note on the requirements/spec: Real projects can have ambiguous or continually changing
 requirements. One component of this class is learning to deal with very loose requirements
 and gaining clarification. I highly recommend starting immediately and asking for
 clarification on any 
 
+Almost all code can be improved. You do not need to view the assignment base
+code as untouchable. If you see areas for improvement, you can and should 
+refactor the code to make it better. There are lots of areas related to
+Intent data passing that you might think about improving... 
 
 Using the Application
 ---------------------

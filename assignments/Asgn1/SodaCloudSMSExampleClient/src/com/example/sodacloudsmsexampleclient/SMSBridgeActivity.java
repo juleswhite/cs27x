@@ -29,7 +29,7 @@ public class SMSBridgeActivity extends Activity implements AndroidSodaListener {
 	private SMSManager smsManager_;
 	
 	/**
-	 * Asgn Step 5: Instantiate an instance of your
+	 * Asgn Step 8: Instantiate an instance of your
 	 * Module implementation and assign it to the
 	 * configuration variable. Note, your module instance
 	 * should be configured to map:
