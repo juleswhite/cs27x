@@ -33,4 +33,4 @@ Handing in Code Reviews
 -----------------------
 Code reviews will be handed in via Piazza. Your code review should be posted as a question and tagged with the appropriate "hwX" folder (e.g., hw1 for asgn1). Please exactly follow the formatting shown in the example code review: "Proposed Improvements for Jules' Asgn1 (Example Code Review)".
 
-
+There is no specific limit on the number of refactorings that you can suggest. At a minimum, you should suggest 3. However, since you have to do less refactoring of your own code if you get more accepted refactorings, you can propose as many refactorings as you want. If you propose K refactorings that are accepted in your code review and you have N refactorings that are accepted on your own code, you will be responsible for implementing N-(K-1) of those refactorings. If you give great feedback to others, you might not have to do any of the suggested refactorings on your own code.
