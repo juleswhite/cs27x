@@ -31,5 +31,6 @@ pushed.
 
 Handing in Code Reviews
 -----------------------
-Code reviews should be placed in a "reviews" folder in your repo and pushed to GitHub.
-The code review form should be renamed "AsgnX".
+Code reviews will be handed in via Piazza. Your code review should be posted as a question and tagged with the appropriate "hwX" folder (e.g., hw1 for asgn1). Please exactly follow the formatting shown in the example code review: "Proposed Improvements for Jules' Asgn1 (Example Code Review)".
+
+
