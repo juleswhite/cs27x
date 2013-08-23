@@ -54,7 +54,6 @@ public class SMSManagerImpl implements SMSManager {
 					 * Asgn Step 1: This code should construct
 					 * a new SMS message using the data stored
 					 * in "msg" and invoke the the received() method 
-					 * in a separate thread. 
 					 * 
 					 */
 				}
