@@ -33,7 +33,7 @@ Using the Application
 
 The workflow for using the application is as follows:
 
-1. The user launches their web browser to http://<their_ip_address>:8081/
+1. The user launches their web browser to http://their_ip_address:8081/
 
 2. An Android device launches the SodaCloudSMSExampleClient
 
