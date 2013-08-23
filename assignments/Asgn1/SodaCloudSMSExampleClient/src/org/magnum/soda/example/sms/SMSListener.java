@@ -10,7 +10,7 @@ import org.magnum.soda.proxy.SodaAsync;
 
 public interface SMSListener {
 
-	
+        @SodaAsync	
 	public void smsEvent(SMSEvent evt);
 	
 	@SodaAsync
