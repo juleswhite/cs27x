@@ -1,9 +1,7 @@
-----------------------------------------------------------------------------------
-Assignment 2
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
-Overview: 
-----------------------------------------------------------------------------------
+# Assignment 2
+
+## Overview
+
 This assignment will test your ability to test. The provided code is for a half-baked
 Dropbox implementation. Your goal is to create a comprehensive set of tests for the
 code base and a report detailing what works and what doesn't. Your test infrastructure
@@ -20,9 +18,7 @@ appropriate to make it easier to test (but not less functional!).
 Hint:
 Some of this code may be difficult to test without using mock objects.
 
-----------------------------------------------------------------------------------
-Instructions:
-----------------------------------------------------------------------------------
+## Instructions
 
 The half-baked Dropbox app is launched by starting a first computer to act as the
 primary server and then one or more clients that connect to the server. You provide
@@ -31,7 +27,7 @@ synchronize the files in their watched directories.
 
 To run the Dropbox server:
 
-To start the dropbox server:
+To start the Dropbox server:
 1. Run (top menu bar)-> Run Configurations -> Select Java Applications ->
    Click New -> Set the project to JavaTestingExercise and the main class to
    the Dropbox class
@@ -51,13 +47,13 @@ To start the dropbox server:
 3. Click Run
 
 
-To start a dropbox client:
+To start a Dropbox client:
 
 1. Follow step 1 above, but change the name of the new run configuration
 
 2. Under arguments, provide the path to a new test directory and then the IP address
    where you are running the server. If you want to run the server on the same
-   computer, use ifconfig (mac) or ipconfig (windows) to get your IP address.
+   computer, use ifconfig (Mac) or ipconfig (Windows) to get your IP address.
    
    Note: strange things may happen if the client / server run on the same machine
    and use the same directory...
@@ -69,12 +65,11 @@ To start a dropbox client:
 3. Click Run
 
 
-----------------------------------------------------------------------------------
-Testing:
-----------------------------------------------------------------------------------
+## Testing
+
 You will need to create JUnit tests for this project. You can easily create these
 tests by right-clicking on a package -> New -> JUnit Test Case. Each method annotated
-with @Test will be run as a test. 
+with `@Test` will be run as a test. 
 
 In order run a test case right-click on the JUnit test case
 and select "run as"->"JUnit Test" if you are asked to "select the preferred launcher," 
