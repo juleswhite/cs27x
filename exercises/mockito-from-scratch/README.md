@@ -28,7 +28,8 @@ Implement an equivalent to Mockito's ArgCaptor. Example:
 
 foo.bar("asdf");
 
-ArgCaptor<String> argval = ArgCaptor.create(String.class);
+ArgCaptor&lt;String&gt; argval = ArgCaptor.create(String.class);
+
 verify(foo).bar(argval.capture());
 
 assertEquals("asdf", argval.get());
@@ -41,7 +42,9 @@ One feature that we would like to be able to provide is to ensure that when one 
 a sequence of methods are always called after it. For example:
 
 Resource resource = resourceManager.acquireResource("someId");
+
 ...
+
 resourceManager.release(resource);
 
 We might want to check that release is always called and passed the Resource object returned
