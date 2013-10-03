@@ -35,6 +35,12 @@ public class PhotoSvc {
 	 * 
 	 * http://docs.spring.io/spring/docs/2.5.6/reference/beans.html#beans-factory-collaborators
 	 * 
+	 * 
+	 * Step 2a: Export your implementation of the DataStore in a jar file and exchange implementations
+	 * with another team. Replace your DataStore within the Spring configuration file with the other
+	 * team's and use it for the rest of the assignment.
+	 * 
+	 * 
 	 */
 	
 	public PhotoSvc(){
