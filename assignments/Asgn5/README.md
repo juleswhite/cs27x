@@ -1,6 +1,10 @@
 Assignment 5
 ============
 
+Due Date
+--------
+10/27/2013
+
 Overview
 --------
 
