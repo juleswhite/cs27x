@@ -1,0 +1,16 @@
+ <resources>
+    <string-array name="gps_rates">
+        <item>Every Day</item> 
+        <item>Every Hour</item>
+        <item>Every Minute</item>
+    </string-array>
+    
+    <string-array name="taunt_multiplier">
+        <item>1</item> 
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>100</item>
+        <item>1000</item>
+    </string-array>
+</resources>
