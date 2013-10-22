@@ -56,9 +56,11 @@ to query, analyze, and visualize log events.
 
 Prerequisites
 -------------
-1. Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
+1. Install Vagrant: http://docs.vagrantup.com/v2/installation/ 
 
-2. Install Vagrant: http://docs.vagrantup.com/v2/installation/ 
+2. (if needed) Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
+
+
 
 
 Helpful Guides
