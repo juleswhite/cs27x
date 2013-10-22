@@ -60,7 +60,9 @@ Prerequisites
 
 2. (if needed) Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
 
+3. Clone the exercise repo
 
+4. Cd into the exercise repo and type "vagrant up"
 
 
 Helpful Guides
