@@ -1,0 +1,41 @@
+{
+  "project_page": "https://github.com/elasticsearch/puppet-elasticsearch",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/elasticsearch/puppet-elasticsearch",
+  "checksums": {
+    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "LICENSE": "1fc7fa7c411594f07888338b1865e9d7",
+    "templates/etc/elasticsearch/elasticsearch.yml.erb": "7960bf7708776396cf094e6bd5ee9e97",
+    "manifests/init.pp": "0a2ee898e72bc85b7f91b12b22072a04",
+    "manifests/package.pp": "f888a269dffc8ba1358b3fe558f7ddb9",
+    "manifests/template.pp": "a362fdf5c9e26510048fa9e730ed49bf",
+    "templates/etc/default/elasticsearch.erb": "496bf6f670c8a68653f2b9256c1539e0",
+    "spec/classes/elasticsearch_init_spec.rb": "d876ee65fe9cbabfc4f04de48a17c7a4",
+    "manifests/params.pp": "01a422c1a84ee073e0ebafc2585ff7ed",
+    "CHANGELOG": "6fa25a87d60ed7311403992eec4081c8",
+    "manifests/config.pp": "0463f24a00e0472996c0b18d5e976e5b",
+    "manifests/python.pp": "c3a546ce1eba575c209175867494f599",
+    "manifests/service.pp": "50709f07a8bea21172d59eeb15e589f1",
+    "Modulefile": "beaacf02407cbdcc878b0df8bef3b514",
+    "README.md": "a75ebe5b4562b12eda4cf4fa3f696931",
+    "Rakefile": "d9fad069cf2dfdc0541548e278e39bbb",
+    "manifests/java.pp": "94ecd1ef0bdccf492657c39a04d9d09e",
+    "manifests/plugin.pp": "b02c99cbd74aa0b20f547e942b854cf3",
+    "spec/defines/template_spec.rb": "a3bc69d8e679bdef1a4ff4957a2c68e8",
+    "CONTRIBUTORS": "14df2fd27cf7b6ca9833527f2ba93442"
+  },
+  "types": [
+
+  ],
+  "description": "Module for managing and configuring Elasticsearch nodes",
+  "version": "0.1.3",
+  "summary": "Module for managing and configuring Elasticsearch nodes",
+  "name": "ispavailability-elasticsearch",
+  "author": "ispavailability",
+  "dependencies": [
+    {
+      "version_requirement": ">= 3.0.0",
+      "name": "puppetlabs/stdlib"
+    }
+  ]
+}
