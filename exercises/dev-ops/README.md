@@ -104,7 +104,7 @@ Exercise Instructions
 ----------------------
 
 1. Update the Puppet script in mainfests/default.pp to install
-the following packages: zip, curl, nginix, and openjdk-7-jre-headless
+the following packages: zip, curl, nginx, and openjdk-7-jre-headless
 
 2. Ensure that zip, curl, and openjdk-7-jre-headless are
 installed after apt-get update is run
