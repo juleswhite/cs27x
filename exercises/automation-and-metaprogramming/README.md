@@ -8,6 +8,7 @@ example, the framework has a simple implementation of an Echo annotation that
 automatically logs entrance and execution to a method through System.out.println.
 The usage for the Echo annotation is as follows:
 
+```java
 public class YourClass {
 
 @Echo("a label for yourMethod()")
@@ -16,12 +17,15 @@ public void yourMethod(){
 }
 
 }
+```
 
 Then, when you create an instance of your class, you
 do the following to enable annotation procesing:
 
+```java
 YourClass obj = new YourClass();
 obj = PreProcessorWrapper.wrap(obj);
+```
 
 The PreProcessorWrapper.wrap(...) method creates a proxy to the original object
 that will ensure that the appropriate pre/post method execution logic is applied to
