@@ -56,9 +56,13 @@ to query, analyze, and visualize log events.
 
 Prerequisites
 -------------
-1. Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
+1. Install Vagrant: http://docs.vagrantup.com/v2/installation/ 
 
-2. Install Vagrant: http://docs.vagrantup.com/v2/installation/ 
+2. (if needed) Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
+
+3. Clone the exercise repo
+
+4. Cd into the exercise repo and type "vagrant up"
 
 
 Helpful Guides
@@ -100,7 +104,7 @@ Exercise Instructions
 ----------------------
 
 1. Update the Puppet script in mainfests/default.pp to install
-the following packages: zip, curl, nginix, and openjdk-7-jre-headless
+the following packages: zip, curl, nginx, and openjdk-7-jre-headless
 
 2. Ensure that zip, curl, and openjdk-7-jre-headless are
 installed after apt-get update is run
