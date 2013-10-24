@@ -1,10 +1,8 @@
-----------------------------------------------------------------------------------
-Assignment 6
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
+Metaprogramming & Automation Assignment 
+=======================================
 Overview: 
-----------------------------------------------------------------------------------
-This assignment is based around a framework for enabling users to
+----------
+This metaprogramming and automation exercise is based around a framework for enabling users to
 create Java annotations that provide pre/post method execution logic. For
 example, the framework has a simple implementation of an Echo annotation that
 automatically logs entrance and execution to a method through System.out.println.
@@ -45,14 +43,12 @@ pre/post execution logic as follows:
 Another simple example annotation is the TimeMe annotation. The TimeMe annotation 
 automatically prints method execution times to System.out.println.
 
-----------------------------------------------------------------------------------
 Instructions:
 ----------------------------------------------------------------------------------
 
 Read through the source code and look for the @AsgnStep("...") annotation. The
 instructions for each step are directly embedded in the source code.
 
-----------------------------------------------------------------------------------
 Testing:
 ----------------------------------------------------------------------------------
 In order to test your code, right-click on the org.cs27x.adv.java.test.PreProcessorWrapperTest
