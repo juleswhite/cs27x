@@ -15,7 +15,11 @@ v1.0 Demo in Class: 11/21
 
 Final Demo and Presentation: 12/5
 
+Overview of Deliverables
+-------------------------
 For the project ideas deliverable, you must bring 3 project ideas to class and be prepared to present them (no slides are required -- but you can create them if you want). Once you have formed a team, you will use Pivotal Tracker to create a set of requirements for your project in the form of "user stories" (see Intro_to_Agile_Methods in the course reading materials). We will go over the user stories in class and you must justify that they demonstrate sufficient complexity for a group-based final project. The last class before Thanksgiving, you will present a 1.0 demo of your project. You will demo the final version of the project in class on 12/5. All steps, including the 1.0 demo, count towards the project grade.
+
+The final version of the code must be checked into a public GitHub repo before class on 12/5. You should send an email to the TA with a link to the repo.
 
 Core Requirements
 --------------------
