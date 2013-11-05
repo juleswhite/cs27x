@@ -12,6 +12,7 @@ Design a development process for this application. Your primary design should ta
 Requirements
 ------------
 Your Development Process Should Cover:
+
 1.	How requirements will be specified and tracked
 2.	Your development cycle
 3.	Progress tracking/assessment
