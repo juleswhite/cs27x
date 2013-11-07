@@ -44,8 +44,7 @@ Installing AppEngine
 
 Running the App
 ----------------
-1. Install the Google AppEngine \\
-2. Right-click on the root of the project -> Run as -> Web Application
+1. Right-click on the root of the project -> Run as -> Web Application
 
 Building Blocks
 ----------------
