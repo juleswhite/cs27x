@@ -34,7 +34,7 @@ import com.beoui.geocell.model.Point;
 import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
-import com.google.appengine.datanucleus.query.JDOCursorHelper;
+import org.datanucleus.store.appengine.query.JDOCursorHelper;
 
 @PersistenceCapable
 public class LocatableData implements LocationCapable {

@@ -27,7 +27,7 @@ import com.google.appengine.api.datastore.KeyFactory;
 @PersistenceCapable
 public class Friends {
 
-	// Every persistent object needs a primary key. 
+	// Every persistent object needs a primary key.
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key key;
@@ -40,16 +40,11 @@ public class Friends {
 	@Persistent
 	private String user;
 
-	public void save() {
-		PersistenceManager pm = PMF.get().getPersistenceManager();
-		try{
-			// To save an object annotated with @PersistenceCapable,
-			// you just need to ask the PersistenceManager to make it
-			// persistent (e.g., store it).
-			pm.makePersistent(this);
-		} finally {
-			pm.close();
-		}
+	public void save(PersistenceManager pm) {
+		// To save an object annotated with @PersistenceCapable,
+		// you just need to ask the PersistenceManager to make it
+		// persistent (e.g., store it).
+		pm.makePersistent(this);
 	}
 
 	public Set<String> getFriendIds() {
@@ -77,60 +72,46 @@ public class Friends {
 	public void setKey(Key key) {
 		this.key = key;
 	}
-	
-	
+
 	/**
-	 * You can either put these types of query operations directly
-	 * in your controller or as simple utility functions like this
-	 * on the class.
+	 * You can either put these types of query operations directly in your
+	 * controller or as simple utility functions like this on the class.
 	 * 
 	 * 
 	 * @param key
 	 * @return
 	 */
-	public static Friends byKey(String key) {
+	public static Friends byKey(String key, PersistenceManager pm) {
 		Friends friends = null;
 
-		// The PersistenceManager is responsible for moving objects
-		// in/out of the data store
-		PersistenceManager pm = PMF.get().getPersistenceManager();
 		try {
 			// Fetching a specific object by key
 			Key k = KeyFactory.stringToKey(key);
 			friends = pm.getObjectById(Friends.class, k);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-		} finally {
-			// You always need to close a PersistenceManager
-			pm.close();
 		}
-
 		return friends;
 	}
 
-	public static Friends byUser(String user) {
+	public static Friends byUser(String user, PersistenceManager pm) {
 
-		PersistenceManager pm = PMF.get().getPersistenceManager();
 		List<Friends> results = null;
 
-		try {
-			// We can declare a query that finds stored objects with
-			// member variables that meet a specific criteria. This is
-			// roughly equivalent to looping over a list of Java Friends objects
-			// and finding the subset where getUser().equals(u). For security
-			// purposes, we declare the type of the parameter "u". 
-			Query query = pm.newQuery("select from " + Friends.class.getName()
-					+ " where user==u");
-			query.declareParameters("String u");
-			
-			// When the query is executed, we pass in a value for every parameter.
-			// In this case, we are binding a value for "u".
-			results = (List<Friends>) query.execute(user);
-		} finally {
-			pm.close();
-		}
+		// We can declare a query that finds stored objects with
+		// member variables that meet a specific criteria. This is
+		// roughly equivalent to looping over a list of Java Friends objects
+		// and finding the subset where getUser().equals(u). For security
+		// purposes, we declare the type of the parameter "u".
+		Query query = pm.newQuery("select from " + Friends.class.getName()
+				+ " where user==u");
+		query.declareParameters("String u");
+
+		// When the query is executed, we pass in a value for every parameter.
+		// In this case, we are binding a value for "u".
+		results = (List<Friends>) query.execute(user);
+
 		return (results != null && results.size() == 1) ? results.get(0) : null;
 	}
-
 
 }

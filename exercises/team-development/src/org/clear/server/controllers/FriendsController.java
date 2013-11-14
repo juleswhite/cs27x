@@ -14,14 +14,13 @@
 package org.clear.server.controllers;
 
 import java.util.HashSet;
-import java.util.List;
+
+import javax.jdo.PersistenceManager;
 
 import org.clear.server.data.Friends;
-import org.clear.server.data.LocatableData;
-import org.clear.server.data.Result;
+import org.clear.server.data.PMF;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,14 +33,18 @@ public class FriendsController {
 
 	/**
 	 * 
-	 * @param key - the key of the Friends object to query for.
-	 * @param model - this Map is converted to JSON and returned to the client.
+	 * @param key
+	 *            - the key of the Friends object to query for.
+	 * @param model
+	 *            - this Map is converted to JSON and returned to the client.
 	 * @return
 	 */
 	@RequestMapping(value = "/data/friends/find", method = RequestMethod.GET)
 	public String myFriends(@RequestParam("user") String user, Model model) {
 
-		Friends friends = Friends.byUser(user);
+		PersistenceManager pm = PMF.get().getPersistenceManager();
+		
+		Friends friends = Friends.byUser(user, pm);
 
 		if (friends != null)
 			model.addAttribute("data", friends);
@@ -51,10 +54,8 @@ public class FriendsController {
 		return JSON_VIEW;
 	}
 
-	
 	/**
-	 * Do a proximity search for LocationData near a lat/lon
-	 * coordinate.
+	 * Do a proximity search for LocationData near a lat/lon coordinate.
 	 * 
 	 * @param lat
 	 * @param lon
@@ -64,22 +65,28 @@ public class FriendsController {
 	 * @return
 	 */
 	@RequestMapping(value = "/data/friends/add", method = RequestMethod.GET)
-	public String addFriend(@RequestParam("user") String user, 
+	public String addFriend(@RequestParam("user") String user,
 			@RequestParam("friend") String friend, Model model) {
 
-		Friends friends = Friends.byUser(user);
+		PersistenceManager pm = PMF.get().getPersistenceManager();
 
-		if (friends == null){
+		Friends friends = Friends.byUser(user,pm);
+
+		if (friends == null) {
 			friends = new Friends();
 			friends.setFriendIds(new HashSet<String>());
 			friends.setUser(user);
 		}
-		
+
 		friends.getFriendIds().add(friend);
-		friends.save();
+		friends.save(pm);
+
+		
+		pm.close();
 		
 		model.addAttribute("data", true);
 
 		return JSON_VIEW;
 	}
+
 }

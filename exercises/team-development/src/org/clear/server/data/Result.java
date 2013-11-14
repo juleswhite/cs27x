@@ -15,7 +15,7 @@ package org.clear.server.data;
 
 import java.util.List;
 
-import com.google.appengine.datanucleus.query.JDOCursorHelper;
+import org.datanucleus.store.appengine.query.JDOCursorHelper;
 
 public class Result<T> {
      private List<T> results_;

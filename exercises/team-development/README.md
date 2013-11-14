@@ -1,6 +1,25 @@
 Eat with Me Hackathon
 ======================
 
+Do this first!
+--------------
+
+Follow these instructions EXACTLY or the project will not be imported correctly:
+
+1. Install AppEngine
+2. Clone the repo (done or you wouldn't be reading this)
+3. File->Import->General->Existing Projects Into Workspace
+4. Choose this project on disk (should appear as FeedMeNow)
+5. After the import is complete, right-click on the project, Google->AppEngine Settings
+6. Check "use Google AppEngine" and make sure that 1.8.7 or higher is the version of
+   the SDK listed (if not, select use specific SDK and select it)
+7. Ensure that "Use DataNucleus..." is checked
+8. Ensure that DataNucleus JDO/JPA version is set to v1
+9. The project should rebuild and compile correctly
+
+Do not check-in your .settings folder or changes to your .project folder or you
+will break your other team member's Eclipse setups... 
+
 Overview
 ---------
 The goals of this exercise are to gain familiarity with AppEngine and practice 
