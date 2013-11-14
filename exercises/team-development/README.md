@@ -48,7 +48,7 @@ into the address bar and JSON results printed in the browser.
 This project is more work than one person can accomplish in the class period. The
 only way to complete the project is to divide up the work among the team members.
 
-When your application is complete, put your <app_id>.appspot.com ID up on the board.
+When your application is complete, put your &lt;app_id&gt;.appspot.com ID up on the board.
 
 Installing AppEngine
 ---------------------
@@ -63,8 +63,7 @@ Installing AppEngine
 
 Running the App
 ----------------
-1. Install the Google AppEngine \\
-2. Right-click on the root of the project -> Run as -> Web Application
+1. Right-click on the root of the project -> Run as -> Web Application
 
 Building Blocks
 ----------------
@@ -92,7 +91,8 @@ The programmatic building blocks are as follows:
    request paths that the app will respond to and methods to handle them by adding them
    to a Controller object in org.clear.server.controllers. Any method can be annotated 
    to add a handled request as follows:
-   
+
+```java 
    @RequestMapping(
    			// The url path that the method handles, http://localhost:8888/data/friends/find
    			value = "/data/friends/find", 
@@ -114,6 +114,7 @@ The programmatic building blocks are as follows:
 		// Tell Spring to render the returned data as JSON
 		return JSON_VIEW;
 	}
+```
 	
 2. AppEngine uses the JDO Java standard for automatically storing entire objects in a database
    using Object Relational Mapping (e.g., automatically map your object instances that you store
@@ -121,7 +122,8 @@ The programmatic building blocks are as follows:
    are provided for you in the Friends and LocatableData classes. LocatableData uses a specialized
    geohashing scheme to support proximity queries on AppEngine's key/value (e.g., NoSQL) datastore.
    The basics of persisting data are to create a new class as follows:
-   
+
+```java 
    // Mark the class with @PersistenceCapable to indicate that it is going to be stored in the
    // datastore
    @PersistenceCapable
@@ -138,16 +140,17 @@ The programmatic building blocks are as follows:
 		
 		//Add getters/setters
 	}
+```	
+
+To save an instance of an object, see the example in Friends.save(). For querying, see the
+examples in Friends.byKey(...) and Friends.byUser(...).
 	
-	To save an instance of an object, see the example in Friends.save(). For querying, see the
-	examples in Friends.byKey(...) and Friends.byUser(...).
+AppEngine provides a management interface to view all persisted data in:
+http://localhost:8888/_ah/admin (local debugging)
 	
-	AppEngine provides a management interface to view all persisted data in:
-	http://localhost:8888/_ah/admin (local debugging)
+or
 	
-	or
-	
-	http://appspot.com (apps that have been deployed to AppEngine)
+http://appspot.com (apps that have been deployed to AppEngine)
 	
 3. A basic geo-querying service is implemented in GeoDataController.
  
@@ -166,7 +169,7 @@ The programmatic building blocks are as follows:
    (if needed). Your app will be packaged, deployed, and launched in Google's cloud in a
    few seconds. You can view all of your running versions at:
    
-   https://appengine.google.com/instances?&app_id=<your_app_id>
+   https://appengine.google.com/instances?&app_id=&lt;your_app_id&gt;
    
    Notice that the AppEngine console has management tools for a variety of aspects of our
    app, ranging from logs to previously deployed versions. If you want to deploy multiple
