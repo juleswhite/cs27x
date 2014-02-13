@@ -11,11 +11,19 @@ Follow these instructions EXACTLY or the project will not be imported correctly:
 3. File->Import->General->Existing Projects Into Workspace
 4. Choose this project on disk (should appear as mcc-appengine-server)
 5. After the import is complete, right-click on the project, Google->AppEngine Settings
-6. Check "use Google AppEngine" and make sure that 1.8.7 or higher is the version of
+6. Uncheck "use Google AppEngine" 
+7. Uncheck "use JDO..."
+8. Hit OK
+9. Re-open the AppEngine Settings, Check "use Google App Engine" and make sure that 1.8.7 or 
+   higher is the version of
    the SDK listed (if not, select use specific SDK and select it)
 7. Ensure that "Use DataNucleus..." is checked
-8. Ensure that DataNucleus JDO/JPA version is set to v1
-9. The project should rebuild and compile correctly
+8. Ensure that DataNucleus JDO/JPA version is set to v2
+9. Hit OK
+10. (if the project has an exclamation point) Right-click on the project, go to properties, 
+    Java Build Path, choose the Libraries tab, scroll the the bottom and select the 
+    App Engine SDK library that is listed as "unbound" and then hit remove and OK
+11. The project should rebuild and compile correctly
 
 Do not check-in your .settings folder or changes to your .project folder or you
 will break your other team member's Eclipse setups... 
