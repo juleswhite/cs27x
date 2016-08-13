@@ -20,4 +20,5 @@ b.	Make sure and put your name and preferred email address in the email
 a.	You do NOT need Netbeans
 11.	Download and install the Android SDK & ADT bundle for eclipse (instructions: http://developer.android.com/sdk/index.html)
 12.	Install the Android 2.1-2.3 and 4.0+ platforms in Eclipse: http://developer.android.com/tools/help/sdk-manager.html
-
+13. Sign up for the course mailing list http://eepurl.com/cbw2X5 (required)
+14. Sign up for the course's Piazza site (piazza.com/vanderbilt/fall2016/csx278univ3278)
